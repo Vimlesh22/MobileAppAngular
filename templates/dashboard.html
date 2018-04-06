@@ -1,0 +1,28 @@
+<md-content layout="row" flex layout-wrap>
+<md-card ng-repeat="x in product" style="height:500;width:400;" flex=30 layout-wrap>
+
+
+    <md-card-content layout="column" flex>
+      <img src="{{x.image.small}}" mat-card-sm-image style="height:450px;width:280px"></img mat-card-sm-image>
+        <div layout-padding><h3 style="color:green">{{x.name}}</h3></div>
+      <ul>
+        <li>
+          {{"Manufacturer: "+x.specs.manufacturer}}
+        </li>
+        <li>
+          {{"Storage: "+x.specs.storage+"GB"}}
+        </li>
+        <li>
+          {{"Camera: "+x.specs.camera+"Mpx"}}
+        </li>
+      </ul>
+      <div layout-align="row">
+        <md-button md-no-ink class="md-primary md-raised" >Buy Now!</md-button>
+      <!-- <md-button class="md-raised" class="md-primary">Buy Now!</md-button> -->
+      <span layout-align="center end">{{"$ "+x.price}}</span>
+    </div>
+  </md-card-content>
+
+
+</md-card>
+</md-content>

@@ -1,0 +1,38 @@
+
+<div  layout="column" style="height:70px;"ng-cloak layout-padding >
+
+  <section layout="row" flex>
+
+    <md-sidenav style="margin-top:64px" class="md-sidenav-left" md-component-id="left"
+                md-disable-backdrop md-whiteframe="4">
+
+      <md-content >
+        <md-toolbar class="md-hue-2" layout-padding layout="row" layout-align="center center">Filters</md-toolbar>
+        <div style="background-color:yellow"><h2>Manufacturer</h2></div>
+        <div ng-repeat="x in product" layout-margin>
+        <md-checkbox>{{x.specs.manufacturer}}</md-checkbox>
+        </div>
+
+
+      <div style="background-color:yellow"><h2 >Storage</h2></div>
+      <div ng-repeat="x in product" layout-margin>
+      <md-checkbox>{{x.specs.storage+"GB"}}</md-checkbox>
+      </div>
+
+      <div style="background-color:yellow"><h2 >OS</h2></div>
+      <div ng-repeat="x in product" layout-margin>
+      <md-checkbox>{{x.specs.os}}</md-checkbox>
+      </div>
+
+      <div style="background-color:yellow"><h2 >Camera</h2></div>
+      <div ng-repeat="x in product" layout-margin>
+      <md-checkbox>{{x.specs.camera+"Mpx"}}</md-checkbox>
+      </div>
+
+      </md-content>
+
+    </md-sidenav>
+
+  </section>
+
+</div>
